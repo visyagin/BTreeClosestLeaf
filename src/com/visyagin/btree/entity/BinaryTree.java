@@ -15,11 +15,11 @@ public class BinaryTree {
     }
 
     /**
-     * See {@link #printPathToClosestLeaf()}
+     * See {@link #pathToClosestLeaf()}
      * @return List<Integer> that contains a path from the nearest leaf to the root node
      */
-    public List<Integer> printPathToClosestLeaf() {
-        printPathToClosestLeaf(root, new ArrayList<>());
+    public List<Integer> pathToClosestLeaf() {
+        pathToClosestLeaf(root, new ArrayList<>());
         Collections.reverse(resultPath);
         return resultPath;
     }
@@ -29,16 +29,16 @@ public class BinaryTree {
      * @param node - see {@link Node}
      * @param newPath - variable for storing temporal path
      */
-    private void printPathToClosestLeaf(Node node, List<Integer> newPath) {
+    private void pathToClosestLeaf(Node node, List<Integer> newPath) {
         List<Integer> localPath = new ArrayList<>(newPath);
         localPath.add(node.getValue());
 
         if (!Objects.isNull(node.getLeft())) {
-            printPathToClosestLeaf(node.getLeft(), localPath);
+            pathToClosestLeaf(node.getLeft(), localPath);
         }
 
         if (!Objects.isNull(node.getRight())) {
-            printPathToClosestLeaf(node.getRight(), localPath);
+            pathToClosestLeaf(node.getRight(), localPath);
         }
 
         boolean isLeaf = Objects.isNull(node.getLeft()) && Objects.isNull(node.getRight());

@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         BinaryTree bt = stubbedTree();
 
-        List<Integer> pathToTheNearestLeaf = bt.printPathToClosestLeaf();
-        System.out.println(String.format("Path from the nearest leaf to the root node is %s", pathToTheNearestLeaf));
+        List<Integer> pathToClosestLeaf = bt.pathToClosestLeaf();
+        System.out.println(String.format("Path from the nearest leaf to the root node is %s", pathToClosestLeaf));
     }
 
     private static BinaryTree stubbedTree() {
