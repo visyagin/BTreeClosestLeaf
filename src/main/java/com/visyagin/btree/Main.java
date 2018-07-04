@@ -12,6 +12,9 @@ public class Main {
 
         List<Integer> pathToClosestLeaf = bt.pathToClosestLeaf();
         System.out.println(String.format("Path from the nearest leaf to the root node is %s", pathToClosestLeaf));
+
+        String pathFoundByLevelTraversal = bt.pathToClosestLeafWithLevelOrderTraverse();
+        System.out.println(String.format("Path from the nearest leaf to the root node is %s", pathFoundByLevelTraversal));
     }
 
     private static BinaryTree stubbedTree() {
