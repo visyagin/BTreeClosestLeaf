@@ -15,6 +15,10 @@ public class Main {
 
         String pathFoundByLevelTraversal = bt.pathToClosestLeafWithLevelOrderTraverse();
         System.out.println(String.format("Path from the nearest leaf to the root node is %s", pathFoundByLevelTraversal));
+
+        System.out.println("Tree size: " + bt.size());
+        System.out.println("Max value: " + bt.maxValue());
+        System.out.println("Tree height: " + bt.height());
     }
 
     private static BinaryTree stubbedTree() {
